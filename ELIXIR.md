@@ -67,3 +67,15 @@ def recursive_sum(num) do
     num
 end
 ```
+
+## Processes
+
+(BEAM) processes are not OS threads, they are managed by the BEAM virtual machine. This means that they are extremely lightweight in terms of memory and CPU.
+
+Processes run functions in a separate execution context, we can use them to hold state. Elixir provides the `Agent`, `GenServer`, and `Task` abstrations that build on top of processes ([relevant docs](https://hexdocs.pm/elixir/processes.html)).
+
+[Requires Editing] - Communication between processes is achieved via message passing. Unlike threads, state is not shared between processes.
+
+**Related Concepts**
+
+- [Green thread](https://en.wikipedia.org/wiki/Green_thread) - Goroutines from golang being an example.
